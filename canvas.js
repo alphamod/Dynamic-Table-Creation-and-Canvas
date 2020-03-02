@@ -15,6 +15,10 @@ let vars = () => {
 }
 let currX;
 let currY;
+document.getElementById('leftBtn').disabled = true;
+document.getElementById('rightBtn').disabled = true;
+document.getElementById('deleteBtn').disabled = true;
+
 
 let draw = (callback) => {
     let { x, y, r, g, b } = callback();
@@ -22,6 +26,9 @@ let draw = (callback) => {
     c.fillRect(x, y, 200, 100);
     c.stroke();
     document.getElementById('drawBtn').disabled = true;
+    document.getElementById('leftBtn').disabled = false;
+    document.getElementById('rightBtn').disabled = false;
+    document.getElementById('deleteBtn').disabled = false;
     currX = x;
     currY = y;
 }
@@ -36,9 +43,9 @@ let shiftRight = () => {
     }
 }
 let shiftLeft = () => {
-    if (currX > 5){
+    if (currX > 5) {
         currX -= 15;
-    c.clearRect(0, 0, innerWidth, innerHeight);
+        c.clearRect(0, 0, innerWidth, innerHeight);
         c.fillRect(currX, currY, 200, 100);
     } else {
         alert('Reached Border!! Shift Right or Delete.')
@@ -48,5 +55,8 @@ let shiftLeft = () => {
 let deleteRect = () => {
     c.clearRect(0, 0, innerWidth, innerHeight);
     document.getElementById('drawBtn').disabled = false;
+    document.getElementById('leftBtn').disabled = true;
+    document.getElementById('rightBtn').disabled = true;
+    document.getElementById('deleteBtn').disabled = true;
 }
 
