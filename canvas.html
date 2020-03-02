@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="navbar bg-light mb-2">
+      <ul class="nav ml-auto">
+        <li class="nav-item ml-1">
+          <a href="./index.html" class="nav-link btn btn-info">Table</a>
+        </li>
+        <li class="nav-item ml-1">
+          <a href="./canvas.html" class="nav-link btn btn-info">Canvas</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <ul class="nav justify-content-around mt-4">
+        <li class="nav-item">
+          <button class="btn btn-info" id="drawBtn" onclick="draw(vars)">
+            Draw
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-info" onclick="shiftLeft()">Shift Left</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-info" onclick="shiftRight()">
+            Shift Right
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-info" onclick="deleteRect()">Delete</button>
+        </li>
+      </ul>
+      <canvas class="border mt-3 bg-light" id="myCanvas"></canvas>
+    </div>
+    <script src="./canvas.js"></script>
+  </body>
+</html>

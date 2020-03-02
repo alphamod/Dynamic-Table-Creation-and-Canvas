@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <nav class="navbar bg-light mb-2">
+        <button class="btn btn-info" onclick="addRow()" class="navbar-brand">Add Row</button>
+        <ul class="nav">
+            <li class="nav-item ml-1"><a href="./index.html" class="nav-link btn btn-info">Table</a></li>
+            <li class="nav-item ml-1"><a href="./canvas.html" class="nav-link btn btn-info">Canvas</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+      <row class="justify-content-center">
+        <div
+          class="col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-md-3 offset-lg-3 offset-xl-3"
+        >
+          <table id="myTable" class="table table-bordered table-hover">
+            <thead id="tHead" class="text-center text-white bg-info">
+              <tr>
+                <th>Serial Number</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="tBody">
+              <tr>
+                <td>1</td>
+                <td>
+                  <button class="btn btn-info" onclick="deleteRow()">
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </row>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
